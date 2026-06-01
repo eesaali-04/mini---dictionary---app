@@ -19,4 +19,28 @@ while True:
         if word in my_dict:
             print(f'{word}: {my_dict[word]}')
         else:
-            print(f'The word {word} is not in the dictionary. ')
+            print(f'The word {word} is not in the dictionary')
+
+    elif choice == '3':
+        if my_dict:
+            print('The words in the dictionary are: ')
+            for key,value in my_dict.items():
+                print(f'{key}: {value}')
+        else:
+            print('The dictionary is empty.')
+
+    elif choice == '4':
+        word = input('Which word do you want to delete: ').lower()
+        if word in my_dict:
+            del my_dict[word]
+            print(f'Word {word} deleted successfully. ')
+        else:
+            print('Word not found in the dictionary. ')
+
+    elif choice == '5':
+        print('Thank you for using the mini dictionary app. Goodbye. ')
+        break
+
+    else:
+        print('Invalid option. Please enter a choice between 1 and 5')
+        continue
